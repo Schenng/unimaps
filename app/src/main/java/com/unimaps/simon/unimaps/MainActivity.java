@@ -4,11 +4,7 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.location.Location;
-import android.location.LocationListener;
 import android.location.LocationManager;
-import android.location.OnNmeaMessageListener;
-import android.net.sip.SipSession;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -21,9 +17,6 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-
-import java.lang.reflect.Array;
-import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -72,11 +65,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Coordinates Button
-        Button coordinates = findViewById(R.id.coordinates);
+        // Select Coordinates Button
+        Button coordinates = findViewById(R.id.selectCoordinates);
         coordinates.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Log.d("LOGS", "Coordinates Button Clicked");
+                Log.d("LOGS", "Select Coordinates Button Clicked");
                 startActivity(new Intent(MainActivity.this, SelectCoordinates.class));
             }
         });

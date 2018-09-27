@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class SelectCoordinates extends AppCompatActivity {
 
@@ -19,13 +21,19 @@ public class SelectCoordinates extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
         Button coordinates = findViewById(R.id.search);
         coordinates.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
+
+                EditText lngText = findViewById(R.id.longitude);
+                double lng = Double.parseDouble(lngText.getText().toString());
+
+                EditText latText = findViewById(R.id.latitude);
+                double lat = Double.parseDouble(latText.getText().toString());
+
                 Intent intent = new Intent(SelectCoordinates.this, MapsActivity.class);
-                intent.putExtra("LNG", 1 );
-                intent.putExtra("LAT", 1);
+                intent.putExtra("LNG", lng );
+                intent.putExtra("LAT", lat);
                 startActivity(intent);
             }
         });
