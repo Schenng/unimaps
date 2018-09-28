@@ -6,8 +6,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -28,15 +26,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         Log.d("LOGS", "MainActivity - onCreate");
 
@@ -70,7 +59,16 @@ public class MainActivity extends AppCompatActivity {
         coordinates.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Log.d("LOGS", "Select Coordinates Button Clicked");
-                startActivity(new Intent(MainActivity.this, SelectCoordinates.class));
+                startActivity(new Intent(MainActivity.this, SelectCoordinatesActivity.class));
+            }
+        });
+
+        // Search Button
+        Button search = findViewById(R.id.search);
+        search.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Log.d("LOGS", "Search Button Clicked");
+                startActivity(new Intent(MainActivity.this, SearchActivity.class));
             }
         });
 

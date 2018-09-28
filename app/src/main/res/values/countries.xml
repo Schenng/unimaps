@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="asiaCountries">
+        <item>Japan</item>
+        <item>India</item>
+        <item>China</item>
+        <item>Indonesia</item>
+    </string-array>
+
+    <string-array name="africaCountries">
+        <item>South Africa</item>
+        <item>Nigeria</item>
+        <item>Morocco</item>
+        <item>Kenya</item>
+    </string-array>
+
+    <string-array name="northAmericaCountries">
+        <item>USA</item>
+        <item>Canada</item>
+        <item>Mexico</item>
+        <item>Panama</item>
+    </string-array>
+
+    <string-array name="europeCountries">
+        <item>Germany</item>
+        <item>France</item>
+        <item>United Kingdom</item>
+        <item>Spain</item>
+    </string-array>
+
+</resources>

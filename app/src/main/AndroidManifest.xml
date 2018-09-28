@@ -37,9 +37,14 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity
-            android:name=".SelectCoordinates"
+            android:name=".SelectCoordinatesActivity"
             android:label="@string/title_activity_select_coordinates"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SearchActivity"
+            android:label="@string/title_activity_search"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SearchActivity2"></activity>
     </application>
 
 </manifest>

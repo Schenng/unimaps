@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="japanUniversities">
+        <item>Uni 1</item>
+        <item>Uni 2</item>
+        <item>Uni 3</item>
+        <item>Uni 4</item>
+    </string-array>
+    <string-array name="indiaUniversities">
+        <item>Uni 5</item>
+        <item>Uni 6</item>
+        <item>Uni 7</item>
+        <item>Uni 8</item>
+    </string-array>
+    <string-array name="chinaUniversities">
+        <item>Uni 9</item>
+        <item>Uni 10</item>
+        <item>Uni 11</item>
+        <item>Uni 12</item>
+    </string-array>
+    <string-array name="indonesiaUniversities">
+        <item>Uni 13</item>
+        <item>Uni 14</item>
+        <item>Uni 15</item>
+        <item>Uni 16</item>
+    </string-array>
+</resources>
