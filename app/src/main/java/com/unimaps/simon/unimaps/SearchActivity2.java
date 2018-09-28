@@ -1,5 +1,6 @@
 package com.unimaps.simon.unimaps;
 
+import android.content.Context;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,57 +28,48 @@ public class SearchActivity2 extends AppCompatActivity {
 
         String continent = getIntent().getStringExtra("CONTINENT");
 
-        switch (continent) {
-            case "Asia":
-                countriesList = res.getStringArray(R.array.asiaCountries);
-                break;
+        // Create the interpolated resource name
+        String resourceName = continent.toLowerCase().replace(" ","").concat("Countries");
 
-            case "Africa":
-                countriesList = res.getStringArray(R.array.africaCountries);
-                break;
+        // Reference resources by name
+        final String packageName = this.getPackageName();
+        int resourceIndex = getResources().getIdentifier(resourceName, "array", packageName);
+        Log.d("LOGS", "OUTER INDEX:" + resourceIndex);
+        Log.d("LOGS", "PACKAGE NAME:" + packageName);
+        countriesList = getResources().getStringArray(resourceIndex);
 
-            case "North America":
-                countriesList = res.getStringArray(R.array.northAmericaCountries);
-                break;
-
-            case "Europe":
-                countriesList = res.getStringArray(R.array.europeCountries);
-                break;
-        }
-
+        // Create the first dropdown
         final Spinner countriesDropdown = findViewById(R.id.countries);
         ArrayAdapter<String> countriesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, countriesList);
         countriesDropdown.setAdapter(countriesAdapter);
 
+        // Add the listener for the first dropdown in order to conditionally switch the second one
         countriesDropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 String selectedCountry = countriesDropdown.getSelectedItem().toString();
                 Log.d("LOGS", countriesDropdown.getSelectedItem().toString());
 
-                switch (selectedCountry) {
-                    case "Japan":
-                        universitiesList = res.getStringArray(R.array.japanUniversities);
-                        Log.d("LOGS", universitiesList[0]);
-                        break;
+                // Create the interpolated resource name ** HACK **
+                String resourceName = selectedCountry.toLowerCase().replace(" ","").concat("Universities");
 
-                    case "India":
-                        universitiesList = res.getStringArray(R.array.indiaUniversities);
-                        Log.d("LOGS", universitiesList[0]);
-                        break;
-                }
+                // Reference resources by name
+                Log.d("LOGS", "INNER RES:" + resourceName);
+                int resourceIndex = getResources().getIdentifier(resourceName, "array", SearchActivity2.this.getPackageName());
+                Log.d("LOGS", "INNER INDEX:" + resourceIndex);
+                Log.d("LOGS", "INNER PACKAGE NAME:" + SearchActivity2.this.getPackageName());
+                universitiesList = getResources().getStringArray(resourceIndex);
+
+                // Create and set the second dropdown
                 Spinner universitiesDropdown = findViewById(R.id.universities);
                 ArrayAdapter<String> universitiesAdapter = new ArrayAdapter<String>(SearchActivity2.this, android.R.layout.simple_spinner_dropdown_item, universitiesList);
                 universitiesDropdown.setAdapter(universitiesAdapter);
             }
 
-
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {
-                // Disable universities spinner
+                // Util class needed for override
             }
-
         });
-
     }
 }

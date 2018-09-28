@@ -14,7 +14,7 @@
         <item>Kenya</item>
     </string-array>
 
-    <string-array name="northAmericaCountries">
+    <string-array name="northamericaCountries">
         <item>USA</item>
         <item>Canada</item>
         <item>Mexico</item>

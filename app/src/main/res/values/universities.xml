@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--Asia-->
     <string-array name="japanUniversities">
         <item>Uni 1</item>
         <item>Uni 2</item>
@@ -19,6 +20,84 @@
         <item>Uni 12</item>
     </string-array>
     <string-array name="indonesiaUniversities">
+        <item>Uni 13</item>
+        <item>Uni 14</item>
+        <item>Uni 15</item>
+        <item>Uni 16</item>
+    </string-array>
+
+    <!--Africa-->
+    <string-array name="southafricaUniversities">
+        <item>Uni 13</item>
+        <item>Uni 14</item>
+        <item>Uni 15</item>
+        <item>Uni 16</item>
+    </string-array>
+    <string-array name="nigeriaUniversities">
+        <item>Uni 13</item>
+        <item>Uni 14</item>
+        <item>Uni 15</item>
+        <item>Uni 16</item>
+    </string-array>
+    <string-array name="moroccoUniversities">
+        <item>Uni 13</item>
+        <item>Uni 14</item>
+        <item>Uni 15</item>
+        <item>Uni 16</item>
+    </string-array>
+    <string-array name="kenyaUniversities">
+        <item>Uni 13</item>
+        <item>Uni 14</item>
+        <item>Uni 15</item>
+        <item>Uni 16</item>
+    </string-array>
+
+    <!--North America-->
+    <string-array name="usaUniversities">
+        <item>Uni 13</item>
+        <item>Uni 14</item>
+        <item>Uni 15</item>
+        <item>Uni 16</item>
+    </string-array>
+    <string-array name="canadaUniversities">
+        <item>Uni 13</item>
+        <item>Uni 14</item>
+        <item>Uni 15</item>
+        <item>Uni 16</item>
+    </string-array>
+    <string-array name="mexicoUniversities">
+        <item>Uni 13</item>
+        <item>Uni 14</item>
+        <item>Uni 15</item>
+        <item>Uni 16</item>
+    </string-array>
+    <string-array name="panamaUniversities">
+        <item>Uni 13</item>
+        <item>Uni 14</item>
+        <item>Uni 15</item>
+        <item>Uni 16</item>
+    </string-array>
+
+    <!--Europe-->
+    <string-array name="germanyUniversities">
+        <item>Uni 13</item>
+        <item>Uni 14</item>
+        <item>Uni 15</item>
+        <item>Uni 16</item>
+    </string-array>
+    <string-array name="franceUniversities">
+        <item>Uni 13</item>
+        <item>Uni 14</item>
+        <item>Uni 15</item>
+        <item>Uni 16</item>
+    </string-array>
+    <string-array name="unitedkingdomUniversities">
+        <item>Uni 13</item>
+        <item>Uni 14</item>
+        <item>Uni 15</item>
+        <item>Uni 16</item>
+    </string-array>
+    <string-array name="spainUniversities">
         <item>Uni 13</item>
         <item>Uni 14</item>
         <item>Uni 15</item>
