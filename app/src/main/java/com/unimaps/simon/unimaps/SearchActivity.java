@@ -23,7 +23,7 @@ public class SearchActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // Allows me to access the resources
+        // Access Resources
         Resources res = getResources();
 
         // Get the list of continents
@@ -34,16 +34,23 @@ public class SearchActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, continents);
         dropdown.setAdapter(adapter);
 
+        // Button handler
         Button ok = findViewById(R.id.ok);
         ok.setOnClickListener(new View.OnClickListener(){
 
+            // Pass continent name
             public void onClick(View v){
                 String continent = dropdown.getSelectedItem().toString();
-
-                Log.d("LOGS", continent);
                 Intent intent = new Intent(SearchActivity.this, SearchActivity2.class);
                 intent.putExtra("CONTINENT", continent );
                 startActivity(intent);
+            }
+        });
+
+        Button back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(SearchActivity.this, MainActivity.class));
             }
         });
     }

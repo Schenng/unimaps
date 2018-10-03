@@ -33,5 +33,13 @@ public class SelectCoordinatesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(SelectCoordinatesActivity.this, MainActivity.class));
+            }
+        });
+
     }
 }
