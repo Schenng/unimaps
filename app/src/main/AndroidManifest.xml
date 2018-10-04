@@ -38,15 +38,23 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps" />
+            android:label="@string/title_activity_maps"
+            android:configChanges="orientation|keyboardHidden"
+
+        />
         <activity
             android:name=".SelectCoordinatesActivity"
             android:label="@string/title_activity_select_coordinates"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|keyboardHidden"
+        />
+
         <activity
             android:name=".SearchActivity"
             android:label="@string/title_activity_search"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|keyboardHidden"
+        />
         <activity android:name=".SearchActivityExtended"></activity>
     </application>
 
