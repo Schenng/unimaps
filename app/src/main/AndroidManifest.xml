@@ -47,7 +47,7 @@
             android:name=".SearchActivity"
             android:label="@string/title_activity_search"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SearchActivity2"></activity>
+        <activity android:name=".SearchActivityExtended"></activity>
     </application>
 
 </manifest>
