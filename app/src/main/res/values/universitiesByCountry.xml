@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Asia-->
+    <string-array name="japanUniversities">
+        <item>The University of Tokyo</item>
+        <item>Nihon University</item>
+    </string-array>
+
+    <string-array name="indiaUniversities">
+        <item>University of Rajasthan</item>
+        <item>Phule University</item>
+    </string-array>
+
+    <string-array name="chinaUniversities">
+        <item>City University of Hong Kong</item>
+        <item>South China Normal University</item>
+    </string-array>
+
+    <string-array name="indonesiaUniversities">
+        <item>Jenderal Soedirman University</item>
+        <item>Rectorate Building of Jenderal Soedirman University</item>
+    </string-array>
+
+    <!--Africa-->
+    <string-array name="southafricaUniversities">
+        <item>University of South Africa</item>
+        <item>University of Cape Town</item>
+    </string-array>
+
+    <string-array name="nigeriaUniversities">
+        <item>University of Lagos</item>
+        <item>University of Benin</item>
+    </string-array>
+
+    <string-array name="moroccoUniversities">
+        <item>Al Akhawayn University</item>
+        <item>University of Al Quaraouiyine</item>
+    </string-array>
+
+    <string-array name="kenyaUniversities">
+        <item>Mount Kenya University</item>
+        <item>University of Nairobi</item>
+    </string-array>
+
+    <!--North America-->
+    <string-array name="usaUniversities">
+        <item>NYU</item>
+        <item>Harvard</item>
+    </string-array>
+    <string-array name="canadaUniversities">
+        <item>McGill University</item>
+        <item>U of T</item>
+    </string-array>
+    <string-array name="mexicoUniversities">
+        <item>University of Guadalajara</item>
+        <item>Instituto Tecnologico Autonomo</item>
+    </string-array>
+
+    <string-array name="panamaUniversities">
+        <item>University of Panama</item>
+        <item>Technological University of Panama</item>
+    </string-array>
+
+    <!--Europe-->
+    <string-array name="germanyUniversities">
+        <item>Technical University of Munich</item>
+        <item>Freie Universitat Berlin</item>
+    </string-array>
+
+    <string-array name="franceUniversities">
+        <item>HEC Paris</item>
+        <item>University of Grenoble</item>
+    </string-array>
+
+    <string-array name="unitedkingdomUniversities">
+        <item>Oxford University</item>
+        <item>University of Cambridge</item>
+    </string-array>
+
+    <string-array name="spainUniversities">
+        <item>Universidad Complutense de Madrid</item>
+        <item>Open University of Catalonia</item>
+    </string-array>
+</resources>

@@ -4,16 +4,22 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import java.util.List;
+
 public class SearchActivityExtended extends AppCompatActivity {
 
     String[] countriesList = new String[0];
     public String[] universitiesList = new String[0];
+
+    Spinner countriesDropdown;
+    Spinner universitiesDropdown;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +39,7 @@ public class SearchActivityExtended extends AppCompatActivity {
         countriesList = getResources().getStringArray(resourceIndex);
 
         // Create the first dropdown with the countriesList
-        final Spinner countriesDropdown = findViewById(R.id.countries);
+        countriesDropdown = findViewById(R.id.countries);
         ArrayAdapter<String> countriesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, countriesList);
         countriesDropdown.setAdapter(countriesAdapter);
 
@@ -53,7 +59,7 @@ public class SearchActivityExtended extends AppCompatActivity {
                 universitiesList = getResources().getStringArray(resourceIndex);
 
                 // Create the second dropdown with the universitiesList
-                Spinner universitiesDropdown = findViewById(R.id.universities);
+                universitiesDropdown = findViewById(R.id.universities);
                 ArrayAdapter<String> universitiesAdapter = new ArrayAdapter<String>(SearchActivityExtended.this, android.R.layout.simple_spinner_dropdown_item, universitiesList);
                 universitiesDropdown.setAdapter(universitiesAdapter);
             }
@@ -70,13 +76,20 @@ public class SearchActivityExtended extends AppCompatActivity {
             public void onClick(View v){
 
                 // Get the selected university of the second dropdown
-                String selectedUniversity = countriesDropdown.getSelectedItem().toString();
+                String selectedUniversity = universitiesDropdown.getSelectedItem().toString();
+
+                // Create the interpolated resource name to be able to reference by the identifier
+                String resourceName = selectedUniversity.replace(" ","_");
+                Log.d("LOGS", resourceName);
+                // Reference countriesList resource by name
+                int resourceIndex = getResources().getIdentifier(resourceName, "array", SearchActivityExtended.this.getPackageName());
+                String[] coordinates = getResources().getStringArray(resourceIndex);
 
                 // Pass the university name and associated coordinates
                 Intent intent = new Intent(SearchActivityExtended.this, MapsActivity.class);
                 intent.putExtra("UNIVERSITY_NAME", selectedUniversity );
-                intent.putExtra("LAT", Double.valueOf(1));
-                intent.putExtra("LNG", Double.valueOf(1));
+                intent.putExtra("LNG", Double.valueOf(coordinates[0]));
+                intent.putExtra("LAT", Double.valueOf(coordinates[1]));
                 startActivity(intent);
             }
         });

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Lat, Lng -->
+
+<resources>
+
+    <!-- Asia -->
+    <string-array name="The_University_of_Tokyo">
+        <item>139.3424269692968</item>
+        <item>35.6255289</item>
+    </string-array>
+
+    <string-array name="Nihon_University">
+        <item>139.76258183056405</item>
+        <item>35.69715535</item>
+    </string-array>
+
+    <string-array name="University_of_Rajasthan">
+        <item>75.8138498</item>
+        <item>26.8885434</item>
+    </string-array>
+
+    <string-array name="Phule_University">
+        <item>73.823686</item>
+        <item>18.5555749</item>
+    </string-array>
+
+    <string-array name="City_University_of_Hong_Kong">
+        <item>114.1697029124231</item>
+        <item>22.34000115</item>
+    </string-array>
+
+    <string-array name="South_China_Normal_University">
+        <item>113.34009651145041</item>
+        <item>23.143197</item>
+    </string-array>
+
+    <string-array name="Jenderal_Soedirman_University">
+        <item>109.24588440400245</item>
+        <item>-7.403370150000001</item>
+    </string-array>
+
+    <string-array name="Rectorate_Building_of_Jenderal_Soedirman_University">
+        <item>109.24571495009228</item>
+        <item>-7.4049495499999995</item>
+    </string-array>
+
+    <!--Africa-->
+        <string-array name="University_of_South_Africa">
+            <item>28.199000825879878</item>
+            <item>-25.7668545</item>
+        </string-array>
+        <string-array name="University_of_Cape_Town">
+            <item>18.459973488801793</item>
+            <item>-33.95828745</item>
+        </string-array>
+        <string-array name="University_of_Lagos">
+            <item>3.3943665395944107</item>
+            <item>6.51289575</item>
+        </string-array>
+        <string-array name="University_of_Benin">
+            <item>5.600647</item>
+            <item>6.3343603</item>
+        </string-array>
+        <string-array name="Al_Akhawayn_University">
+            <item>-5.106878</item>
+            <item>33.5392075</item>
+        </string-array>
+        <string-array name="University_of_Al_Quaraouiyine">
+            <item>-9.5379746</item>
+            <item>30.362065</item>
+        </string-array>
+        <string-array name="Mount_Kenya_University">
+            <item>37.0851322</item>
+            <item>-1.0459186</item>
+        </string-array>
+        <string-array name="University_of_Nairobi">
+            <item>39.5737189</item>
+            <item>-4.3184711</item>
+        </string-array>
+    
+    <!--North America-->
+        <string-array name="NYU">
+            <item>-73.99625393609625</item>
+            <item>40.72925325</item>
+        </string-array>
+        <string-array name="Harvard">
+            <item>-71.1266665287448</item>
+            <item>42.36782045</item>
+        </string-array>
+        <string-array name="McGill_University">
+            <item>-73.57911626059384</item>
+            <item>45.50691775</item>
+        </string-array>
+        <string-array name="U_of_T">
+            <item>-79.39769974989522</item>
+            <item>43.663333449999996</item>
+        </string-array>
+        <string-array name="University_of_Guadalajara">
+            <item>-103.51177736665832</item>
+            <item>20.746271999999998</item>
+        </string-array>
+        <string-array name="Instituto_Tecnologico_Autonomo">
+            <item>-96.88069518789257</item>
+            <item>19.50202255</item>
+        </string-array>
+        <string-array name="University_of_Panama">
+            <item>-79.54585568319516</item>
+            <item>8.980016899999999</item>
+        </string-array>
+        <string-array name="Technological_University_of_Panama">
+            <item>-80.4153148</item>
+            <item>7.9279236</item>
+        </string-array>
+
+    <!--Europe-->
+        <string-array name="Technical_University_of_Munich">
+            <item>11.553143192240475</item>
+            <item>48.15359035</item>
+        </string-array>
+        <string-array name="Freie_Universitat_Berlin">
+            <item>13.308178098909352</item>
+            <item>52.491398950000004</item>
+        </string-array>
+        <string-array name="HEC_Paris">
+            <item>1.7977184</item>
+            <item>49.8624754</item>
+        </string-array>
+        <string-array name="University_of_Grenoble">
+            <item>5.7357819</item>
+            <item>45.1875602</item>
+        </string-array>
+        <string-array name="Oxford_University">
+            <item>-1.2651448728790433</item>
+            <item>51.7583164</item>
+        </string-array>
+        <string-array name="University_of_Cambridge">
+            <item>0.11613393752867196</item>
+            <item>52.2069625</item>
+        </string-array>
+        <string-array name="Universidad_Complutense_de_Madrid">
+            <item>-3.698519329023008</item>
+            <item>40.37665725</item>
+        </string-array>
+        <string-array name="Open_University_of_Catalonia">
+            <item>2.1635238457663224</item>
+            <item>41.3868913</item>
+        </string-array>
+
+</resources>
