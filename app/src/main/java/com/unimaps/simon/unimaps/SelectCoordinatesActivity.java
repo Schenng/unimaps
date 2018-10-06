@@ -14,8 +14,6 @@ public class SelectCoordinatesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_coordinates);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         Button coordinates = findViewById(R.id.search);
         coordinates.setOnClickListener(new View.OnClickListener(){

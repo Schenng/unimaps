@@ -37,6 +37,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Log.d("LOGS", "Current Location - " + "Lat:" + getIntent().getDoubleExtra("LNG", 0) + "Lng:" + getIntent().getDoubleExtra("LAT", 0));
 
         mMap.addMarker(new MarkerOptions().position(currentLocation).title("Current Location"));
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.getUiSettings().setAllGesturesEnabled(true);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLocation, 15));
     }
 }

@@ -20,21 +20,20 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    public MyLocationListener locationListener;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         // Initialize the Location Services
-        final LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        final MyLocationListener locationListener = new MyLocationListener();
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        locationListener = new MyLocationListener();
 
         // Check if location services are enabled for the app
         if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             Log.d("LOGS", "Location allowed");
-            locationManager.requestLocationUpdates("gps", 5000, 0 , locationListener);
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0 , locationListener);
         } else {
             Log.d("LOGS", "Location Disallowed - Prompt Permissions Dialog");
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
@@ -74,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         Button quit = (Button) findViewById(R.id.quit);
         quit.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                finish();
+                finishAffinity();
                 System.exit(0);
             }
         });
@@ -100,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        Log.d("LOGS", "Orientation changed");
     }
 
     // Handles the permission step for location
